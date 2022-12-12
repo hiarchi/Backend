@@ -1,6 +1,11 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/collectionName", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 // create application/json parser
 var jsonParser = bodyParser.json()
 
